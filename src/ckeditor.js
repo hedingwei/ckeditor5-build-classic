@@ -18,6 +18,7 @@ import ImageuploadPlugin from '@ckeditor/ckeditor5-image/src/imageupload';
 import LinkPlugin from '@ckeditor/ckeditor5-link/src/link';
 import ListPlugin from '@ckeditor/ckeditor5-list/src/list';
 import ParagraphPlugin from '@ckeditor/ckeditor5-paragraph/src/paragraph';
+import SimpleuploadPlugin from 'ckeditor5-simple-upload/src/simpleupload';
 
 export default class ClassicEditor extends ClassicEditorBase {}
 
@@ -36,7 +37,8 @@ ClassicEditor.build = {
 		ImageuploadPlugin,
 		LinkPlugin,
 		ListPlugin,
-		ParagraphPlugin
+		ParagraphPlugin,
+		SimpleuploadPlugin
 	],
 	config: {
 		toolbar: {
