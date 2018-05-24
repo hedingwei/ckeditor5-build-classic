@@ -4,7 +4,7 @@ CKEditor 5 的自定义build，支持imageUpload（简单版本）
 
 ## 安装
 ```bash
-npm install https://github.com/hedingwei/ckeditor5-build-classic.git
+npm install https://github.com/hedingwei/ckeditor5-build-yx-std.git
 ```
 
 ##图片上传功能
