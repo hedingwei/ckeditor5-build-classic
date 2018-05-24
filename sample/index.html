@@ -28,7 +28,11 @@
 
 <script src="../build/ckeditor.js"></script>
 <script>
-	ClassicEditor.create( document.querySelector( '#editor' ) )
+	ClassicEditor.create( document.querySelector( '#editor' ), {
+        simpleUpload: {
+				uploadUrl: 'http://120.76.121.210:10010/pmsapi/common/simple-upload',
+			}
+    } )
 		.then( editor => {
 			window.editor = editor;
 		} )
