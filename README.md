@@ -1,3 +1,54 @@
+
+CKEditor 5 的自定义build，支持imageUpload（简单版本）
+========================================
+
+## 安装
+```bash
+npm install https://github.com/hedingwei/ckeditor5-build-classic.git
+```
+
+##图片上传功能
+
+```javascript
+<script>
+	ClassicEditor.create( document.querySelector( '#editor' ), {
+        simpleUpload: {
+				uploadUrl: 'http://120.76.121.210:10010/pmsapi/common/simple-upload',
+			}
+    } )
+		.then( editor => {
+			window.editor = editor;
+		} )
+		.catch( err => {
+			console.error( err.stack );
+		} );
+</script>
+```
+## 服务端规则
+
+上传服务器的url接收一个名为uploadfile参数作为文件名，并且应该返回图片的URL。 
+
+* 成功返回：
+```json
+{
+    "uploaded": true,
+    "url": "http://127.0.0.1/uploaded-image.jpeg"
+}
+```
+* 失败返回：
+
+```json
+{
+    "uploaded": false,
+    "error": {
+        "message": "could not upload this image"
+    }
+}
+```
+
+其余部分使用参考标准的CKEditor 5 classic build
+
+
 CKEditor 5 classic editor build
 ========================================
 
